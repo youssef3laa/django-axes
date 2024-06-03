@@ -156,7 +156,7 @@ class AxesDatabaseHandler(AbstractAxesHandler, AxesBaseHandler):
             # in order to bypass the defense mechanisms that are used by the site.
             else:
                 separator = "\n---------\n"
-
+                print('current', attempt.failures_since_start)
                 attempt.get_data = Concat("get_data", Value(separator + get_data))
                 attempt.post_data = Concat(
                     "post_data", Value(separator + post_data)
@@ -166,6 +166,7 @@ class AxesDatabaseHandler(AbstractAxesHandler, AxesBaseHandler):
                 attempt.failures_since_start =+ 1
                 attempt.attempt_time = request.axes_attempt_time
                 attempt.save()
+                print('saved attempt', attempt.__dict__)
 
                 log.warning(
                     "AXES: Repeated login failure by %s. Updated existing record in the database.",
