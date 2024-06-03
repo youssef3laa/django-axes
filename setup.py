@@ -3,7 +3,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="django-axes",
+    name="youssef-forked-django-axes",
+    version = '5.27.0.1',
     description="Keep track of failed login attempts in Django-powered sites.",
     long_description="\n".join(
         [
@@ -25,7 +26,7 @@ setup(
     author_email="security@jazzband.co",
     maintainer="Jazzband",
     maintainer_email="security@jazzband.co",
-    url="https://github.com/jazzband/django-axes",
+    url="https://github.com/youssef3laa/django-axes/tree/fork-5.27.0",
     project_urls={
         "Documentation": "https://django-axes.readthedocs.io/",
         "Source": "https://github.com/jazzband/django-axes",

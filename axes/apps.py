@@ -33,7 +33,7 @@ class AppConfig(apps.AppConfig):
             log.info("AXES: BEGIN LOG")
             log.info(
                 "AXES: Using django-axes version %s",
-                get_distribution("django-axes").version,
+                "5.27.0.1",
             )
 
             if settings.AXES_ONLY_USER_FAILURES:
