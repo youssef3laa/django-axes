@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-axes-forked",
-    version = '5.27.1',
+    version = '5.27.0.2',
     description="Keep track of failed login attempts in Django-powered sites.",
     long_description="\n".join(
         [
