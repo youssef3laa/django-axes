@@ -3,8 +3,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="youssef-forked-django-axes",
-    version = '5.27.0.1',
+    name="django-axes-forked",
+    version = '5.27.1',
     description="Keep track of failed login attempts in Django-powered sites.",
     long_description="\n".join(
         [

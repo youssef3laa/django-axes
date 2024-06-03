@@ -127,7 +127,7 @@ class AxesDatabaseHandler(AbstractAxesHandler, AxesBaseHandler):
             (
                 attempt,
                 created,
-            ) = AccessAttempt.objects.select_for_update().get_or_create(
+            ) = AccessAttempt.objects.get_or_create(
                 username=username,
                 ip_address=request.axes_ip_address,
                 user_agent=request.axes_user_agent,
@@ -163,7 +163,7 @@ class AxesDatabaseHandler(AbstractAxesHandler, AxesBaseHandler):
                 )
                 attempt.http_accept = request.axes_http_accept
                 attempt.path_info = request.axes_path_info
-                attempt.failures_since_start = F("failures_since_start") + 1
+                attempt.failures_since_start =+ 1
                 attempt.attempt_time = request.axes_attempt_time
                 attempt.save()
 
